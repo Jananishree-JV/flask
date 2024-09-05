@@ -27,8 +27,8 @@ def create():
 @app.route("/view")
 def view():
     cur.execute("select * from user")
-    data=cur.fetchall()
-    return render_template("view.html",data=data)
+    dataa=cur.fetchall()
+    return render_template("view.html",dataa=dataa)
 @app.route("/update/<id>", methods=["POST","GET"])
 def update(id):
     if request.method=="POST":
